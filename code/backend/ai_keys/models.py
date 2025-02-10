@@ -2,7 +2,6 @@ from django.db import models
 import hashlib
 import secrets
 
-# Create your models here.
 class AiKey(models.Model):
     key_hash = models.CharField(max_length=64, blank=True, null=True)  # For SHA-256 hash
     created_at = models.DateTimeField(auto_now_add=True)
@@ -33,7 +32,6 @@ class AiKey(models.Model):
             super().save(*args, **kwargs)
             # Attach the raw key temporarily so it can be shown once
             self.raw_key = raw_key
-            print(f"Generated key: {raw_key}")
         else:
             super().save(*args, **kwargs)
 
