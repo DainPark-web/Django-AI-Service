@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 CUSTOM_APPS = [
     'users.apps.UsersConfig',
+    'ai_keys.apps.AiKeysConfig',
     'rest_framework',
 ]
 SYSTEM_APPS = [
